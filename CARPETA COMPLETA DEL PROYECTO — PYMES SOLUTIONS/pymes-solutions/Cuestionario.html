@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuestionario Diagnóstico - Pymes Solutions</title>
+  <style>
+    :root {
+      --primary: #0077B6;
+      --secondary: #00A8E8;
+      --accent: #FF6B00;
+      --dark: #343A40;
+      --light: #F8F9FA;
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #f4f6f9;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    header {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .progress-bar {
+      height: 10px;
+      background: #e9ecef;
+      border-radius: 10px;
+      overflow: hidden;
+      width: 100%;
+      max-width: 400px;
+    }
+    .progress {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      width: 65%;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+    .category {
+      margin-bottom: 30px;
+    }
+    .category h3 {
+      color: var(--primary);
+      margin-bottom: 15px;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 8px;
+    }
+    .question {
+      margin-bottom: 20px;
+      padding: 15px;
+      background: #f8f9fa;
+      border-radius: 8px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    .options label {
+      display: inline-block;
+      margin-right: 20px;
+      margin-bottom: 10px;
+    }
+    .btn {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+    .btn-primary:hover {
+      background: #005f8f;
+      transform: translateY(-2px);
+    }
+    .btn-secondary {
+      background: #6c757d;
+      color: white;
+    }
+    .actions {
+      display: flex;
+      gap: 15px;
+      justify-content: flex-end;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>Cuestionario Diagnóstico Empresarial</h1>
+        <p>Pymes Solutions</p>
+      </div>
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+    </header>
+
+    <div class="card">
+      <div class="category">
+        <h3>1. Estrategia y Gestión</h3>
+        <div class="question">
+          <label>¿La empresa tiene definida su misión y visión?</label>
+          <div class="options">
+            <label><input type="radio" name="q1"> Sí</label>
+            <label><input type="radio" name="q1"> No</label>
+            <label><input type="radio" name="q1"> Parcialmente</label>
+          </div>
+        </div>
+        <div class="question">
+          <label>¿Existe un plan estratégico a 3-5 años?</label>
+          <div class="options">
+            <label><input type="radio" name="q2"> Sí</label>
+            <label><input type="radio" name="q2"> No</label>
+            <label><input type="radio" name="q2"> En desarrollo</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn btn-secondary">Guardar Borrador</button>
+        <button class="btn btn-primary">Siguiente Sección</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
