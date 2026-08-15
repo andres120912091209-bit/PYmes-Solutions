@@ -1,17 +1,33 @@
-from sqlalchemy import Column, Integer, String, Float, Boolean, DateTime, Text
-from sqlalchemy.sql import func
-from app.database import Base
+from pydantic import BaseModel, Field
+from typing import Optional
+from datetime import datetime
 
 
-class Product(Base):
-    __tablename__ = "products"
+class ProductBase(BaseModel):
+    name: str = Field(..., min_length=2, max_length=120)
+    description: Optional[str] = None
+    price: float = Field(..., gt=0)
+    stock: int = Field(0, ge=0)
+    category: Optional[str] = Field(None, max_length=80)
 
-    id = Column(Integer, primary_key=True, index=True)
-    name = Column(String(120), nullable=False, index=True)
-    description = Column(Text, nullable=True)
-    price = Column(Float, nullable=False)
-    stock = Column(Integer, default=0)
-    category = Column(String(80), nullable=True)
-    is_active = Column(Boolean, default=True)
-    created_at = Column(DateTime(timezone=True), server_default=func.now())
-    updated_at = Column(DateTime(timezone=True), onupdate=func.now())
+
+class ProductCreate(ProductBase):
+    pass
+
+
+class ProductUpdate(BaseModel):
+    name: Optional[str] = Field(None, min_length=2, max_length=120)
+    description: Optional[str] = None
+    price: Optional[float] = Field(None, gt=0)
+    stock: Optional[int] = Field(None, ge=0)
+    category: Optional[str] = Field(None, max_length=80)
+    is_active: Optional[bool] = None
+
+
+class ProductResponse(ProductBase):
+    id: int
+    is_active: bool
+    created_at: Optional[datetime] = None
+
+    class Config:
+        from_attributes = True
