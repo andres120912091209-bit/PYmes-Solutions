@@ -1,0 +1,46 @@
+### 1. Crear Cliente
+POST http://localhost:8080/api/v1/clients
+Content-Type: application/json
+
+{
+  "name": "Empresa Demo SAS",
+  "email": "demo@empresa.com",
+  "phone": "3001234567",
+  "company": "Demo SAS"
+}
+
+### 2. Crear Producto
+POST http://localhost:8080/api/v1/products
+Content-Type: application/json
+
+{
+  "name": "Servicio de Consultoría",
+  "description": "Consultoría tecnológica para Pymes",
+  "price": 850000,
+  "stock": 50,
+  "category": "Servicios"
+}
+
+### 3. Listar Clientes
+GET http://localhost:8080/api/v1/clients
+
+### 4. Listar Productos
+GET http://localhost:8080/api/v1/products
+
+### 5. Actualizar Cliente
+PUT http://localhost:8080/api/v1/clients/1
+Content-Type: application/json
+
+{
+  "name": "Empresa Demo Actualizada",
+  "email": "demo@empresa.com",
+  "phone": "3009998877",
+  "company": "Demo SAS Actualizada",
+  "isActive": true
+}
+
+### 6. Eliminar Cliente
+DELETE http://localhost:8080/api/v1/clients/1
+
+### 7. Prueba de error (ID no existe)
+GET http://localhost:8080/api/v1/clients/999
