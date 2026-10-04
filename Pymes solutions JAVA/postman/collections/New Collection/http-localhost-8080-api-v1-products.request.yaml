@@ -1,0 +1,21 @@
+$kind: http-request
+name: http://localhost:8080/api/v1/products
+description: ""
+url: http://localhost:8080/api/v1/products
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"name\": \"Servicio de Consultoría\",\r
+
+    \  \"description\": \"Consultoría tecnológica para Pymes\",\r
+
+    \  \"price\": 850000,\r
+
+    \  \"stock\": 50,\r
+
+    \  \"category\": \"Servicios\"\r
+
+    }"
+order: 1655838440951776

@@ -1,0 +1,38 @@
+# Pymes Solutions – Chatbot PoC
+
+Prueba de concepto de un **chatbot de orientación** para el proyecto formativo **Pymes Solutions**, un sistema de gestión orientado a Pequeñas y Medianas Empresas.
+
+## Objetivo
+
+Demostrar la viabilidad de incorporar una tecnología emergente (asistente virtual / chatbot inteligente) en la solución de software, con el fin de atender consultas frecuentes de clientes y usuarios de forma automática.
+
+## Problema que resuelve
+
+En una Pyme es común recibir de forma repetitiva preguntas sobre horarios, productos, registro de clientes y datos de contacto. Esta prueba de concepto muestra cómo un chatbot puede apoyar esa atención básica y reducire la carga operativa.
+
+## Funcionalidad implementada
+
+- Interfaz de chat sencilla (usuario y bot)
+- Respuestas automáticas a consultas frecuentes
+- Validación de entrada vacía
+- Mensaje por defecto cuando la pregunta no es reconocida
+- Datos de prueba orientados al contexto de Pymes Solutions
+
+## Tecnología y recursos utilizados
+
+- HTML5
+- CSS3
+- JavaScript (lógica de coincidencia de palabras clave)
+- Navegador web (Chrome, Edge o Firefox)
+- Git y GitHub para control de versiones
+
+> Nota: Esta versión funciona sin servicios externos de IA. Puede evolucionar hacia un modelo de IA o API externa en una integración posterior.
+
+## Estructura del proyecto
+
+```text
+pymes-chatbot-poc/
+├── index.html      # Interfaz del chatbot
+├── style.css       # Estilos visuales
+├── app.js          # Lógica del asistente
+└── README.md       # Documentación

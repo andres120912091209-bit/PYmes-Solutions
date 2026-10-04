@@ -1,0 +1,19 @@
+$kind: http-request
+name: http://localhost:8080/api/v1/clients
+description: ""
+url: http://localhost:8080/api/v1/clients
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"name\": \"Empresa Demo SAS\",\r
+
+    \  \"email\": \"demo@empresa.com\",\r
+
+    \  \"phone\": \"3001234567\",\r
+
+    \  \"company\": \"Demo SAS\"\r
+
+    }"
+order: 1791133393382

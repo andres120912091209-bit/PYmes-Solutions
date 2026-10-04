@@ -9,5 +9,4 @@ public class PymesSolutionsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(PymesSolutionsApplication.class, args);
 	}
-
 }
