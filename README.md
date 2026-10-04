@@ -132,3 +132,104 @@ SENA / ITC
 git add README.md
 git commit -m "docs: update README with project information"
 git push
+
+1. Contenido del README.md
+Copia y pega esto en tu archivo README.md:
+Markdown# Pymes Solutions API
+
+API REST del proyecto formativo **Pymes Solutions**, orientada a la gestión de Pequeñas y Medianas Empresas.
+
+## Descripción
+
+Esta API permite:
+- Registro e inicio de sesión de usuarios
+- Gestión de clientes (CRUD)
+- Gestión de productos (CRUD)
+
+Fue desarrollada con arquitectura en capas, validaciones básicas, persistencia de datos y control de versiones con Git.
+
+## Tecnologías utilizadas
+
+- Java 21
+- Spring Boot
+- Spring Data JPA
+- Base de datos H2
+- Maven
+- Postman (pruebas)
+- Git y GitHub
+
+## Estructura del proyecto
+
+```text
+com.pymessolutions.pymes_solutions
+├── model
+├── repository
+├── service
+├── controller
+└── PymesSolutionsApplication.java
+Cómo ejecutar el proyecto
+Requisitos
+
+JDK 17 o 21
+IntelliJ IDEA o Maven
+Postman (opcional para pruebas)
+
+Pasos
+
+Clonar el repositorio:Bashgit clone https://github.com/TU-USUARIO/pymes-solutions.git
+Abrir el proyecto en IntelliJ
+Ejecutar la clase PymesSolutionsApplication
+La API estará disponible en:texthttp://localhost:8080
+
+Consola H2
+
+URL: http://localhost:8080/h2-console
+JDBC URL: jdbc:h2:mem:pymesdb
+User: sa
+Password: (vacío)
+
+Endpoints principales
+Autenticación
+
+MétodoEndpointDescripciónPOST/api/v1/auth/registerRegistro de usuarioPOST/api/v1/auth/loginInicio de sesión
+Ejemplo de registro
+JSON{
+  "name": "Andres Camilo",
+  "email": "andres@test.com",
+  "password": "123456"
+}
+Ejemplo de login
+JSON{
+  "email": "andres@test.com",
+  "password": "123456"
+}
+Clients
+
+
+MétodoEndpointDescripciónGET/api/v1/clientsListar clientesGET/api/v1/clients/{id}Consultar cliente por IDPOST/api/v1/clientsCrear clientePUT/api/v1/clients/{id}Actualizar clienteDELETE/api/v1/clients/{id}Eliminar cliente
+Products
+
+
+MétodoEndpointDescripciónGET/api/v1/productsListar productosGET/api/v1/products/{id}Consultar producto por IDPOST/api/v1/productsCrear productoPUT/api/v1/products/{id}Actualizar productoDELETE/api/v1/products/{id}Eliminar producto
+Pruebas
+Las pruebas funcionales se realizaron con Postman, validando:
+
+Registro de usuarios
+Inicio de sesión
+Operaciones CRUD de clientes y productos
+Manejo de errores (credenciales inválidas, recursos inexistentes)
+
+Autor
+Andres Camilo
+
+Proyecto formativo – Pymes Solutions
+
+Evidencia: GA7-220501096-AA5-EV03
+textLuego ejecuta:
+
+```powershell
+git add README.md
+git commit -m "docs: update README with auth and CRUD endpoints"
+git push
+
+
